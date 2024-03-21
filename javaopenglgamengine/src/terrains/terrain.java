@@ -17,9 +17,9 @@ import org.lwjgl.util.vector.Vector2f;
 import org.lwjgl.util.vector.Vector3f;
 
 public class terrain {
-private static final float SIZE=800;
+private static final float SIZE=3600;
 //private static final int VERTEX_COUNT=128;
-private static final float max_height=25;
+private static final float max_height=100;
 private static final float max_pixel_color=256*256*256;
 private float x;
 private float z;

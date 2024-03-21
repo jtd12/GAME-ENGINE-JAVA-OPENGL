@@ -33,10 +33,10 @@ public class masterRenderer {
 
 	public static final float fov=70;
 	public static final float nearPlane=0.1f;
-	public static final float farPlane=50000.0f;
-	public static final float RED=0.4f;
-	public static final float BLUE=0.6f;
-	public static final float GREEN=0.5f;
+	public static final float farPlane=250000.0f;
+	public static final float RED=0.35f;
+	public static final float BLUE=0.4f;
+	public static final float GREEN=0.35f;
 	
 	private Matrix4f projectionMatrix;
 	private staticShader shader=new staticShader();

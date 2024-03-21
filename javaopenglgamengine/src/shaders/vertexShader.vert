@@ -14,8 +14,8 @@ in vec3 normal;
 out vec3 cameraVector;
 uniform float useFakeLight;
 out float visibility;
-const float density=0.001;
-const float gradient=2.0;
+const float density=0.0025;
+const float gradient=1.0;
 uniform vec4 plane=vec4(0,-1,0,15);
 
 void main(void){

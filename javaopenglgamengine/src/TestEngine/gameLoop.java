@@ -121,77 +121,112 @@ public class gameLoop {
 		List<terrain> terrains=new ArrayList<terrain>();
 		
 		terrains.add(new terrain(0,0,loader,texturePack,blendMap,"heightmap2"));
-		terrains.add(new terrain(1,0,loader,texturePack,blendMap,"heightmap2"));
-		terrains.add(new terrain(0,1,loader,texturePack,blendMap,"heightmap2"));
-		terrains.add(new terrain(1,1,loader,texturePack,blendMap,"heightmap2"));
+		terrains.add(new terrain(-1,0,loader,texturePack,blendMap,"heightmap2"));
+		terrains.add(new terrain(0,-1,loader,texturePack,blendMap,"heightmap2"));
+		terrains.add(new terrain(-1,-1,loader,texturePack,blendMap,"heightmap2"));
 		//terrain terrains2=new terrain(1,0,loader,texturePack,blendMap,"heightmap2");
 		//terrain terrains3=new terrain(0,1,loader,texturePack,blendMap,"heightmap2");
 		//terrain terrains4=new terrain(1,1,loader,texturePack,blendMap,"heightmap2");
 		
 		Random rand=new Random();
 		
-		for(int i=0;i<20;i++)
+		for(int i=0;i<60;i++)
 		{
 			float x=rand.nextFloat()*800;
 			float z=rand.nextFloat()*600;
 			float y=terrains.get(0).getHeightTerrain(x,z);
 			
-			entities.add(new entity(texture,new Vector3f(x,y,z),0,0,0,0.7f));
+			entities.add(new entity(texture,new Vector3f(x,y,z),0,0,0,0.9f));
 		
 		}
-		for(int i=0;i<20;i++)
+		for(int i=0;i<40;i++)
 		{
-			float x=rand.nextFloat()*800+600;
-			float z=rand.nextFloat()*600+800;
+			float x=rand.nextFloat()*-2200;
+			float z=rand.nextFloat()*-2200;
 			float y=terrains.get(3).getHeightTerrain(x,z);
 			
-			entities.add(new entity(texture,new Vector3f(x,y,z),0,0,0,0.8f));
+			entities.add(new entity(texture,new Vector3f(x,y,z),0,0,0,1.8f));
 		
 		}
+		
 		for(int i=0;i<20;i++)
 		{
-			float x=rand.nextFloat()*800 +500;
-			float z=rand.nextFloat()*600;
+			float x=rand.nextFloat()*-2000;
+			float z=rand.nextFloat()*-2000;
+			float y=terrains.get(3).getHeightTerrain(x,z);
+			
+			entities.add(new entity(texture2,new Vector3f(x,y,z),0,0,0,3.8f));
+		
+		}
+		
+		
+		for(int i=0;i<40;i++)
+		{
+			float x=rand.nextFloat()*2200;
+			float z=rand.nextFloat()*-2200;
+			float y=terrains.get(2).getHeightTerrain(x,z);
+			
+			entities.add(new entity(texture,new Vector3f(x,y,z),0,0,0,1.8f));
+		
+		}
+		
+		for(int i=0;i<20;i++)
+		{
+			float x=rand.nextFloat()*2000;
+			float z=rand.nextFloat()*-2000;
+			float y=terrains.get(2).getHeightTerrain(x,z);
+			
+			entities.add(new entity(texture2,new Vector3f(x,y,z),0,0,0,4.8f));
+		
+		}
+		
+		for(int i=0;i<40;i++)
+		{
+			float x=rand.nextFloat()*-2200;
+			float z=rand.nextFloat()*2200;
 			float y=terrains.get(1).getHeightTerrain(x,z);
 			
-			entities.add(new entity(texture,new Vector3f(x,y,z),0,0,0,0.8f));
+			entities.add(new entity(texture,new Vector3f(x,y,z),0,0,0,1.8f));
 		
 		}
 		
 		for(int i=0;i<20;i++)
 		{
-			float x=rand.nextFloat()*800;
-			float z=rand.nextFloat()*600 ;
+			float x=rand.nextFloat()*-2000;
+			float z=rand.nextFloat()*2000;
+			float y=terrains.get(1).getHeightTerrain(x,z);
+			
+			entities.add(new entity(texture3,new Vector3f(x,y,z),0,0,0,2.8f));
+		
+		}
+		
+		
+		for(int i=0;i<20;i++)
+		{
+			float x=rand.nextFloat()*2000;
+			float z=rand.nextFloat()*2000 ;
 			float y=terrains.get(0).getHeightTerrain(x,z);
 			
 			entities.add(new entity(texture2,new Vector3f(x,y,z),0,0,0,0.9f));
 		
 		}
 		
-		for(int i=0;i<20;i++)
-		{
-			float x=rand.nextFloat()*800+500;
-			float z=rand.nextFloat()*600 ;
-			float y=terrains.get(1).getHeightTerrain(x,z);
-			
-			entities.add(new entity(texture2,new Vector3f(x,y,z),0,0,0,1));
-		
-		}
-		
+	/*
 		for(int i=0;i<20;i++)
 		{
 			float x=rand.nextFloat()*800;
-			float z=rand.nextFloat()*600+800;
+			float z=rand.nextFloat()*600+3600;
 			float y=terrains.get(2).getHeightTerrain(x,z);
 			
 		entities.add(new entity(texture2,new Vector3f(x,y,z),0,0,0,1));
 		
 		}
+		*/
 		
-		for(int i=0;i<18;i++)
+		for(int i=0;i<20;i++)
 		{
-			float x=rand.nextFloat()*800;
-			float z=rand.nextFloat()*600;
+			float x=rand.nextFloat()*2000;
+			float z=rand.nextFloat()*2000;
 			float y=terrains.get(0).getHeightTerrain(x,z);
 			
 			entities.add(new entity(texture3,new Vector3f(x,y,z),0,0,0,1));
@@ -200,21 +235,31 @@ public class gameLoop {
 		
 		for(int i=0;i<25;i++)
 		{
-			float x=rand.nextFloat()*800;
-			float z=rand.nextFloat()*600;
+			float x=rand.nextFloat()*2000;
+			float z=rand.nextFloat()*2000;
 			float y=terrains.get(0).getHeightTerrain(x,z);
 			
-			entities.add(new entity(texture4,new Vector3f(x,y,z),0,0,0,1));
+			entities.add(new entity(texture4,new Vector3f(x,y,z),0,0,0,2));
 		
 		}
 		
 		for(int i=0;i<10;i++)
 		{
-			float x=rand.nextFloat()*800;
-			float z=rand.nextFloat()*600;
+			float x=rand.nextFloat()*2000;
+			float z=rand.nextFloat()*2000;
 			float y=terrains.get(0).getHeightTerrain(x,z);
 			
-			entities.add(new entity(texture5,new Vector3f(x,y,z),0,0,0,5));
+			entities.add(new entity(texture5,new Vector3f(x,y,z),0,0,0,10));
+			
+		}
+	
+		for(int i=0;i<20;i++)
+		{
+			float x=rand.nextFloat()*-2000;
+			float z=rand.nextFloat()*-2000;
+			float y=terrains.get(3).getHeightTerrain(x,z);
+			
+			entities.add(new entity(texture5,new Vector3f(x,y,z),0,0,0,20));
 			
 		}
 	
@@ -229,7 +274,7 @@ public class gameLoop {
 		rawModel ModelRoue2=objloader.loadObjModel("roues2", loader);
 		texturedModel textureModelRoue2=new texturedModel(ModelRoue2,new modelTexture(loader.loadTextureJPG("map_vehicule")));
 		
-		p.add(new player(textureModel,new Vector3f(380,25,360),0,0,0,2));
+		p.add(new player(textureModel,new Vector3f(200,25,360),0,0,0,2));
 		roues_.add(new roues(textureModelRoue,new Vector3f(380,25,360),0,0,0,2));
 		roues_.add(new roues(textureModelRoue,new Vector3f(380,25,360),0,0,0,2));
 		
@@ -247,7 +292,7 @@ public class gameLoop {
 		WaterShader waterShader=new WaterShader();
 		
 		waterRenderer waterRender=new waterRenderer(loader,waterShader,master.getProjection(),fbo);
-		WaterTile water=new WaterTile(800,800,-20);
+		WaterTile water=new WaterTile(800,800,-90);
 		List<WaterTile> waters=new ArrayList<WaterTile>();
 		waters.add(water);
 		
@@ -259,7 +304,7 @@ public class gameLoop {
 			
 			master.renderShadowMap(entities,p,light_);
 			
-			if(playerPos.getX()>0 && playerPos.getX()<800 && playerPos.getZ()>0 && playerPos.getZ()<800)
+			if(playerPos.getX()>0 && playerPos.getX()<3600 && playerPos.getZ()>0 && playerPos.getZ()<3600)
 			{
 				 terrains.get(0).setTerrain1(true);
 				 terrains.get(1).setTerrain2(false);
@@ -267,7 +312,7 @@ public class gameLoop {
 				 terrains.get(3).setTerrain4(false);
 				 System.out.println("terrain1!");
 			}
-			if(playerPos.getX()>800 && playerPos.getX()<800+500 && playerPos.getZ()>0 && playerPos.getZ()<800)
+			if(playerPos.getX()>-3600 && playerPos.getX()<0 && playerPos.getZ()>0 && playerPos.getZ()<3600)
 			{
 				 terrains.get(0).setTerrain1(false);
 				 terrains.get(1).setTerrain2(true);
@@ -275,7 +320,7 @@ public class gameLoop {
 				 terrains.get(3).setTerrain4(false);
 				 System.out.println("terrain2!");
 			}
-			if(playerPos.getX()>0 && playerPos.getX()<800 && playerPos.getZ()>800 && playerPos.getZ()<800+500)
+			if(playerPos.getX()>0 && playerPos.getX()<3600 && playerPos.getZ()>-3600 && playerPos.getZ()<0)
 			{
 				 terrains.get(0).setTerrain1(false);
 				 terrains.get(1).setTerrain2(false);
@@ -283,7 +328,7 @@ public class gameLoop {
 				 terrains.get(3).setTerrain4(false);
 				 System.out.println("terrain3!");
 			}
-			if(playerPos.getX()>800 && playerPos.getX()<800+500 && playerPos.getZ()>800 && playerPos.getZ()<800+500)
+			if(playerPos.getX()>-3600 && playerPos.getX()<0 && playerPos.getZ()>-3600 && playerPos.getZ()<0)
 			{
 				 terrains.get(0).setTerrain1(false);
 				 terrains.get(1).setTerrain2(false);

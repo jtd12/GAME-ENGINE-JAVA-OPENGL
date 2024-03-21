@@ -18,8 +18,8 @@ public class player extends entity {
 	private  float currentSpeed=0;
 	private  float currentTurnSpeed=0;
 	private float upwardspeed=0;
-	private float maxSpeed=100.0f;
-	private float acc=0.38f;
+	private float maxSpeed=210.0f;
+	private float acc=0.48f;
 	private float dec=0.15f;
 	private float dec2=0.45f;
 	private int up,down,right,left,space=0;

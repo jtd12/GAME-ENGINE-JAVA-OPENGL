@@ -28,22 +28,24 @@ public class roues extends entity {
 	
 	//this.setIncrementeRotZ(0.5f);
 	
-	float terrainHeights=t.getHeightTerrain(this.getPosition().x, this.getPosition().z);
-	if(this.getPosition().y<terrainHeights-40)
+	/*float terrainHeights=t.getHeightTerrain(this.getPosition().x, this.getPosition().z);
+	
+	if(this.getPosition().y<terrainHeights-4)
 	{
-		this.getPosition().y=terrainHeights-40;
+		this.getPosition().y=terrainHeights-4;
 	}
+	*/
   }
 	public void turnRotZ()
 	{
 		if(Keyboard.isKeyDown(Keyboard.KEY_W))
 		{
-			this.increaseRotation(0,0,0.85f);
+			this.increaseRotation(0,0,0.95f);
 			
 		}
 		else if(Keyboard.isKeyDown(Keyboard.KEY_S))
 		{
-			this.increaseRotation(0,0,-0.85f);
+			this.increaseRotation(0,0,-0.95f);
 			
 		}
 	}
